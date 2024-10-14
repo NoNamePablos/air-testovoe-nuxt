@@ -32,10 +32,10 @@ yarn && yarn dev
 ## Особенности
 
 - Base-range -> использует vuedatepicker для выбора дат [vuedatepicker]( https://vue3datepicker.com/)
-- Для адреса используется сервис dadata -> интегриован пакет [vue-dadata](https://www.npmjs.com/package/vue-dadata)
+- Для адреса используется сервис dadata -> интегрирован пакет [vue-dadata](https://www.npmjs.com/package/vue-dadata)
 - Валидация вынесена в composable функцию
 - vuei18n подключен 
 - Сущности вынесены в namespace и туда подвязаны интерфейсы
-- Плавыне анимкции/ховер/фокус и тп
+- Плавыне анимации/ховер/фокус и тп
 - Для маски используется [maska]( https://www.npmjs.com/package/maska)
 - Конфиг/линтера
