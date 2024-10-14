@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     '@img': fileURLToPath(new URL('./assets/images', import.meta.url)),
     '@icons': fileURLToPath(new URL('./assets/icons', import.meta.url)),
     '@assets': fileURLToPath(new URL('./assets', import.meta.url)),
-    '@configs': fileURLToPath(new URL('./core/configs', import.meta.url)),
     '@store': fileURLToPath(new URL('./store', import.meta.url)),
     '@utils': fileURLToPath(new URL('./utils', import.meta.url))
   },
