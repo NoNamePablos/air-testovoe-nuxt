@@ -1,0 +1,18 @@
+
+@mixin font-face($font-name, $file-path, $weight: 'normal', $style: 'normal') {
+  $url: 'url("' + $file-path + '.woff2") format("woff2"), ';
+  $url: $url + 'url("' + $file-path + '.woff") format("woff")';
+
+  @font-face {
+    font-display: auto;
+    font-family: $font-name;
+    font-style: unquote($style);
+    font-weight: unquote($weight);
+    src: unquote($url);
+  }
+}
+
+@include font-face('Montserrat', '~/assets/fonts/Montserrat/Montserrat-Regular', '400');
+@include font-face('Montserrat Light', '~/assets/fonts/Montserrat/Montserrat-Light', '300');
+@include font-face('Montserrat Medium', '~/assets/fonts/Montserrat/Montserrat-Medium', '500');
+@include font-face('Montserrat SemiBold', '~/assets/fonts/Montserrat/Montserrat-SemiBold', '600');

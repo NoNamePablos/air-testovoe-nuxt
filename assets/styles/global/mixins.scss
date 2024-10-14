@@ -1,0 +1,71 @@
+$max-width: 128;
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet-desktop {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin adaptive-font($pc-size, $mob-size) {
+  $add-size: $pc-size - $mob-size;
+  $add-mob-size: $add-size + $add-size * 0.7;
+
+  @media (min-width: 1281px) {
+    font-size: #{$pc-size + rem};
+  }
+
+  @media (min-width: 768px) and (max-width: 1280px) {
+    font-size: calc(#{$mob-size + rem} + #{$add-size} * (100vw / #{$max-width}));
+  }
+
+  @media (max-width: 767px) {
+    font-size: calc(#{$mob-size + rem} + #{$add-mob-size} * ((100vw - 42.8rem) / #{$max-width}));
+  }
+}
+
+
+@mixin scrollbar(
+  $scrollbarColor: $GRAY,
+  $thumbColor: rgba($GRAY,0.8),
+  $hoverColor: $BRAND_MAIN,
+  $width: $SCROLLBAR_WIDTH,
+  $scrollbarTrackBorderRadius: $SCROLLBAR_TRACK_BORDER_RADIUS,
+  $scrollbarThumbBorderRadius: $SCROLLBAR_THUMB_BORDER_RADIUS,
+  $hideScrollbar: false
+) {
+  @if $hideScrollbar == true {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  } @else {
+    &::-webkit-scrollbar {
+      width: $width;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: $scrollbarTrackBorderRadius;
+      background: $scrollbarColor;
+      box-shadow: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: $scrollbarThumbBorderRadius;
+      background: $thumbColor;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $hoverColor;
+    }
+  }
+}

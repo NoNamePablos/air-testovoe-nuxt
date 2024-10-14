@@ -1,0 +1,19 @@
+/* Семейства шрифтов */
+$FONT_DEFAULT: 'Montserrat', arial, sans-serif;
+
+/* Настройки элементов формы */
+$INPUT_MIN_HEIGHT: 6.4rem;
+$INPUT_BORDER_RADIUS: 1rem;
+
+/* Настройки бордер радиуса */
+$BORDER_RADIUS_SMALL: 0.6rem;
+
+
+/* Скроллбар */
+$SCROLLBAR_WIDTH: 0.4rem;
+$SCROLLBAR_TRACK_BORDER_RADIUS: 0.2rem;
+$SCROLLBAR_THUMB_BORDER_RADIUS: 0.4rem;
+
+/*Transitions*/
+$TRANSITION_FAST: 0.2s ease-in-out;
+$TRANSITION_SLOW: 0.4s ease-in-out;
